@@ -12,8 +12,3 @@ A simple multi-page website for a bakery, showcasing a clean design and interact
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-
-## Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/bakery-website.git
