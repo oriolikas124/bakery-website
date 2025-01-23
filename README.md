@@ -5,8 +5,6 @@ A simple multi-page website for a bakery, showcasing a clean design and interact
 ## Features
 - **JavaScript Carousel:**
 - **Interactive Menu:**
-- **Multiple Pages:**
-
 
 ## Technologies Used
 - **HTML5**
