@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f2e9;
+  color: #333;
+}
+
+header#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #4b2a06;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 9999;
+}
+header .logo img {
+  height: 35px;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+header nav a:hover {
+  color: #ffd485;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.slide.active {
+  opacity: 1;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.carousel-controls span {
+  cursor: pointer;
+  pointer-events: auto;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 20px;
+  transition: color 0.3s;
+  user-select: none;
+}
+.carousel-controls span:hover {
+  color: #ffd485;
+}
+
+#news {
+  max-width: 900px;
+  margin: 80px auto;
+}
+#news h2,
+#news h3 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.news-block {
+  margin-left: 20px;
+}
+.news-block p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+#menu {
+  max-width: 900px;
+  margin: 80px auto;
+}
+#menu h2 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+}
+.menu-item {
+  text-align: center;
+}
+.menu-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.menu-image img {
+  width: 100%;
+  display: block;
+}
+.menu-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+.menu-item:hover .menu-hover {
+  transform: translateY(0);
+}
+.menu-item h3 {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+#address {
+  max-width: 900px;
+  margin: 80px auto;
+}
+#address h2 {
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.map {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+.address-text {
+  text-align: left;
+  margin-left: 20px;
+}
+.address-text p {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: left;
+  padding: 20px;
+  background: #4b2a06;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #4b2a06;
+  color: #d2d2d2;
+  padding: 10px 5%;
+  text-align: left;
+}
+
+.footer > div {
+  flex: 1 1 200px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.address,
+.contact-text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-link {
+  display: block;
+  color: #d2d2d2;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+.footer-link-logo {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.footer-end {
+  width: 100%;
+  background-color: #4b2a06;
+  text-align: center;
+}
+
+.footer-end img {
+  height: 20px;
+}
+
+.pay-box {
+  padding-left: 150px;
+}
+
+.myname {
+  color: #d2d2d2;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer > div {
+    margin: 10px 0;
+  }
+  .footer-end {
+    flex-direction: column;
+  }
+  .footer-end img,
+  .footer-end p {
+    margin: 5px 0;
+  }
+}
